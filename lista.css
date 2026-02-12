@@ -1,0 +1,43 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: comic-sans;
+
+
+    }
+    
+    h1{
+        color: rgb(189, 42, 42);
+        text-align: justify;
+        font-size: 100px;
+    }
+
+    body{
+        background-color: #fa0800;
+        line-height: 1;
+        padding: 30px;
+        font-family: fantasy;
+        background-image: url("assets/gettyimages-106831201-612x612.jpg");
+
+        background-size: cover;
+        background-position: auto;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+    }   
+    
+
+    ol{
+        color: rgb(41, 39, 139);
+        font-size: 30px;
+        text-align: justify;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    button {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+        margin: auto;
+        text-decoration: rgb(128, 255, 0);
+    }
