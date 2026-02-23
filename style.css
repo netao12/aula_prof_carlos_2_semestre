@@ -1,29 +1,36 @@
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: comic-sans;
+/* RESET DASW CONFIGURAÇÕES DO NAVEGADOR */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-    }
+/* ESTILIZAÇÃO DO BODY */
+body {  
     
-    h1{
-        color: brown;
-        text-align: center;
-        font-size: 100px;
-    }
+    background-color: #851414;
+    color: #000000;
+}
 
-    body{
-        background-color: #7bd160;
-        line-height: 1;
-        padding: 30px;
-        font-family: fantasy;
-        background-image: url("assets/tony-soprano-pool\ \(1\).webp");
-    }
+h2 {
+    font-family: 'comic sans ms', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 100px;
+    color: #000000;
+}
 
-    p{
-        color: rgb(22, 6, 252);
-        font-size: 30px;
-        text-align: justify;
-        font-family:'Times New Roman', Times, serif
-    }
+p {
+    font-family: 'comic sans ms', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #000000;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 20%;
+    height: auto;
+}
