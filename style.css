@@ -34,3 +34,50 @@ img {
     max-width: 20%;
     height: auto;
 }
+
+.segunda-pagina {
+    background-image: url(assets/wp12947337.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+ol {
+    font-family: 'comic sans ms', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #000000;
+    list-style-position: inside;
+}
+
+li {
+    font-size: 25px;
+    font-weight: bold;
+    color:#148563;
+    text-align: center;
+}
+
+.terceira-pagina {
+    background-image: url(assets/torcida-bamor-tob-logo-png_seeklogo-245874.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    margin: auto;
+}
+
+body {
+    background-color: #851414;
+    font-style: italic;
+    color: #851414;
+}
+
+p {
+    font-family: 'comic sans ms', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #030303;
+}
