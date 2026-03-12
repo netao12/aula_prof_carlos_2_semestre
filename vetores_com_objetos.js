@@ -41,3 +41,16 @@ menoridade.forEach( usuario =>
     console.log(`${usuario.nome} tem ${usuario.idade} anos.`)
 )
 
+console.log("\nNa lita de usuários, mostre apenas os nomes.")
+const nomes = listaDeUsuarios.map(u => u.nome)
+nomes.forEach(nome => console.log(`Nome: ${nome}`)) 
+
+console.log("\nNa lista de usuários, encontre um usuario.") 
+const usuarioEncontrado = listaDeUsuarios.find(u => u.nome === "Ana")
+console.log(usuarioEncontrado) 
+console.log(`Nome: ${usuarioEncontrado.nome} \nIdade: ${usuarioEncontrado.idade}`) 
+
+console.log("\nNa lista de usuários, econtre um ususário com idade de 45 anos.")
+const usuarioEncontradoIdade = listaDeUsuarios.find(u => u.idade === 45)
+console.log(`Nome: ${usuarioEncontradoIdade.nome} \nIdade: ${usuarioEncontradoIdade.idade}`) 
+
