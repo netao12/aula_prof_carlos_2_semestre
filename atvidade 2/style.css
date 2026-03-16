@@ -1,0 +1,59 @@
+body{
+    background-image: url(assets/sopranos_tabuada.png);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-size: cover;
+}
+
+header{
+
+    color: white;
+    padding: 30px;
+}
+
+
+.logo{
+    width: 500px;
+    height: 300px;
+    background-image: url("assets/Sopranos_titlescreen.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container{
+    background: rgba(246, 246, 246, 0.391);
+    width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    font-size: 30px;
+    font-style: rgb(0, 0, 0);
+    text-decoration-color: #f4f4f4;
+}
+
+input{
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #ff0000;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #2980b9;
+}
+
+#resultado{
+    margin-top: 20px;
+    text-align: left;
+}
