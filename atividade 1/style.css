@@ -1,0 +1,95 @@
+/* style.css */
+
+/* Importando uma fonte com estilo clássico e sério */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #1a1a1a; /* Preto profundo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('https://www.transparenttextures.com/patterns/dark-leather.png'); /* Textura de couro */
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #2c1b12; /* Marrom mogno/escuro */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    border: 2px solid #5d4037;
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #d4af37; /* Dourado relógio do Tony */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #8b0000; /* Vermelho sangue/vinho */
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    color: #bdbdbd;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #4e342e;
+    background-color: #121212;
+    color: #ffd700;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8b0000; /* Vermelho escuro */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+button:hover {
+    background-color: #a50000;
+    box-shadow: 0 0 10px #d4af37; /* Brilho dourado no hover */
+}
+
+#resultadoTabuada {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace; /* Estilo recibo ou contabilidade */
+    color: #ffd700;
+    line-height: 1.6;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Scrollbar personalizada para manter o clima */
+#resultadoTabuada::-webkit-scrollbar {
+    width: 5px;
+}
+#resultadoTabuada::-webkit-scrollbar-thumb {
+    background: #8b0000;
+}
