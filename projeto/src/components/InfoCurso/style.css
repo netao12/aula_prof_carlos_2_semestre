@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* Variáveis com as cores oficiais do Esquadrão */
+:root {
+  --bahia-azul: #003da5;     /* Azul Royal do Bahia */
+  --bahia-vermelho: #e00000; /* Vermelho vibrante */
+  --bahia-branco: #ffffff;
+  --bahia-ouro: #d4af37;     /* Dourado das estrelas do bicampeonato */
+  --aco: #e2e8f0;            /* Cinza metálico simulando o "Aço" */
+}
+
+/* Container Principal do Curso */
+.info-curso {
+  background-color: var(--bahia-branco);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 450px;
+  margin: 50px auto;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 61, 165, 0.15); /* Sombra azulada elegante */
+  border: 1px solid var(--aco);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Faixa Tricolor no topo do cartão */
+.info-curso::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, 
+    var(--bahia-azul) 33.3%, 
+    var(--bahia-branco) 33.3%, var(--bahia-branco) 66.6%, 
+    var(--bahia-vermelho) 66.6%
+  );
+}
+
+/* Efeito de destaque ao passar o mouse */
+.info-curso:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 61, 165, 0.3);
+  border-color: var(--bahia-azul);
+}
+
+/* Marca d'água sutil de Estrela (Bicampeão) no fundo */
+.info-curso::after {
+  content: '★';
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  font-size: 160px;
+  color: var(--aco);
+  opacity: 0.2;
+  z-index: 0;
+  transform: rotate(15deg);
+  transition: all 0.5s ease;
+}
+
+/* A estrela brilha em dourado no hover */
+.info-curso:hover::after {
+  color: var(--bahia-ouro);
+  opacity: 0.15;
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Título: Forte e Imponente */
+.info-curso h2 {
+  color: var(--bahia-azul);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--aco);
+  position: relative;
+  z-index: 1;
+}
+
+/* Detalhe vermelho na linha do título que cresce na animação */
+.info-curso h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--bahia-vermelho);
+  transition: width 0.3s ease;
+}
+
+.info-curso:hover h2::after {
+  width: 120px;
+}
+
+/* Informações do Curso */
+.info-curso p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Marcador (Bullet) Tricolor customizado */
+.info-curso p::before {
+  content: '';
+  display: inline-block;
+  min-width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--bahia-azul);
+  margin-right: 15px;
+  box-shadow: 0 0 0 2px var(--bahia-branco), 0 0 0 4px var(--bahia-vermelho);
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao focar na linha de informação */
+.info-curso p:hover {
+  transform: translateX(8px);
+  color: var(--bahia-azul);
+  font-weight: 700;
+}
+
+/* O marcador fica com as cores invertidas e o miolo dourado */
+.info-curso p:hover::before {
+  background-color: var(--bahia-ouro);
+  box-shadow: 0 0 0 2px var(--bahia-branco), 0 0 0 4px var(--bahia-azul);
+}

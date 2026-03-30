@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis com as cores oficiais e de efeitos */
+:root {
+  --marvel-red: #ED1D24;       /* O vermelho clássico da logo da Marvel */
+  --marvel-dark: #151515;      /* Fundo escuro/fibra de carbono */
+  --marvel-light: #F9F9F9;     /* Texto claro */
+  --arc-reactor-blue: #00E5FF; /* Azul neon do reator do Homem de Ferro */
+  --gold-avenger: #F6C800;     /* Dourado Vingadores */
+}
+
+/* Container do Cartão de Herói (Aluno) */
+.info-aluno {
+  background: linear-gradient(145deg, var(--marvel-dark) 0%, #2a2a2a 100%);
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 50px auto;
+  color: var(--marvel-light);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  z-index: 1;
+}
+
+/* Efeito de levitação e brilho ao passar o mouse no cartão */
+.info-aluno:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(237, 29, 36, 0.4), 0 0 15px rgba(0, 229, 255, 0.2);
+  border-color: var(--marvel-red);
+}
+
+/* Linha de "Escaneamento JARVIS" no fundo */
+.info-aluno::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--arc-reactor-blue);
+  box-shadow: 0 0 15px var(--arc-reactor-blue), 0 0 30px var(--arc-reactor-blue);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.info-aluno:hover::before {
+  animation: scan 2s linear infinite;
+  opacity: 0.8;
+}
+
+/* Título: Estilo Logo da Marvel */
+.info-aluno h2 {
+  background-color: var(--marvel-red);
+  color: white;
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  padding: 5px 15px;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 25px;
+  transform: skewX(-10deg); /* Inclinação típica da logo e HQs */
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8); /* Sombra dura estilo Comic Book */
+  position: relative;
+}
+
+/* Efeito no título ao passar o mouse */
+.info-aluno:hover h2 {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 0px var(--gold-avenger);
+}
+
+/* Estilo das Informações (Parágrafos) */
+.info-aluno p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Efeito HUD nas informações ao passar o mouse (Deslize + Neon) */
+.info-aluno p:hover {
+  padding-left: 15px; /* Empurra o texto levemente para a direita */
+  color: var(--arc-reactor-blue);
+  border-bottom: 1px solid var(--arc-reactor-blue);
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+  cursor: crosshair; /* Cursor muda para alvo */
+}
+
+/* Adicionando um "bullet point" dourado que aparece no hover */
+.info-aluno p::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--gold-avenger);
+  opacity: 0;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.info-aluno p:hover::before {
+  opacity: 1;
+}
+
+/* Animação do Scanner HUD */
+@keyframes scan {
+  0% { top: -10%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
