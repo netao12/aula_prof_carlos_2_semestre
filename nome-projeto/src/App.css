@@ -1,0 +1,73 @@
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.titulo {
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.texto-ajuda {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.input-busca {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-busca:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.resultado-container {
+  min-height: 150px;
+}
+
+.card-jogador {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-jogador h3 {
+  margin-top: 0;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.card-jogador p {
+  margin: 5px 0;
+  color: #444;
+}
+
+.erro-texto {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.vazio-texto {
+  color: #888888;
+  font-style: italic;
+}
